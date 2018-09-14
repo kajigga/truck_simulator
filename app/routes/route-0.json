@@ -1,0 +1,196 @@
+{
+  "distance": {
+    "text": "32.3 mi",
+    "value": 51902
+  },
+  "duration": {
+    "text": "34 mins",
+    "value": 2017
+  },
+  "duration_in_traffic": {
+    "text": "37 mins",
+    "value": 2243
+  },
+  "end_address": "2600 Sunnyside Ave S, Salt Lake City, UT 84108, USA",
+  "end_location": {
+    "lat": 40.7510427,
+    "lng": -111.8141021
+  },
+  "start_address": "2801 North Thanksgiving Way #150, Lehi, UT 84043, USA",
+  "start_location": {
+    "lat": 40.4231408,
+    "lng": -111.8822558
+  },
+  "steps": [
+    {
+      "distance": {
+        "text": "0.5 mi",
+        "value": 765
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 25
+      },
+      "end_location": {
+        "lat": 40.4181855,
+        "lng": -111.8759919
+      },
+      "start_location": {
+        "lat": 40.4231408,
+        "lng": -111.8822558
+      }
+    },
+    {
+      "distance": {
+        "text": "0.4 mi",
+        "value": 660
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 46
+      },
+      "end_location": {
+        "lat": 40.4130129,
+        "lng": -111.872689
+      },
+      "maneuver": "ramp-right",
+      "start_location": {
+        "lat": 40.4181855,
+        "lng": -111.8759919
+      }
+    },
+    {
+      "distance": {
+        "text": "0.3 mi",
+        "value": 521
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 72
+      },
+      "end_location": {
+        "lat": 40.4143434,
+        "lng": -111.8686821
+      },
+      "maneuver": "turn-left",
+      "start_location": {
+        "lat": 40.4130129,
+        "lng": -111.872689
+      }
+    },
+    {
+      "distance": {
+        "text": "0.4 mi",
+        "value": 657
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 48
+      },
+      "end_location": {
+        "lat": 40.4177427,
+        "lng": -111.8749233
+      },
+      "start_location": {
+        "lat": 40.4143434,
+        "lng": -111.8686821
+      }
+    },
+    {
+      "distance": {
+        "text": "14.9 mi",
+        "value": 24026
+      },
+      "duration": {
+        "text": "13 mins",
+        "value": 770
+      },
+      "end_location": {
+        "lat": 40.6168149,
+        "lng": -111.9052605
+      },
+      "maneuver": "merge",
+      "start_location": {
+        "lat": 40.4177427,
+        "lng": -111.8749233
+      }
+    },
+    {
+      "distance": {
+        "text": "11.6 mi",
+        "value": 18748
+      },
+      "duration": {
+        "text": "10 mins",
+        "value": 622
+      },
+      "end_location": {
+        "lat": 40.71113580000001,
+        "lng": -111.8019741
+      },
+      "maneuver": "ramp-right",
+      "start_location": {
+        "lat": 40.6168149,
+        "lng": -111.9052605
+      }
+    },
+    {
+      "distance": {
+        "text": "0.2 mi",
+        "value": 394
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 17
+      },
+      "end_location": {
+        "lat": 40.7132364,
+        "lng": -111.8057083
+      },
+      "maneuver": "ramp-right",
+      "start_location": {
+        "lat": 40.71113580000001,
+        "lng": -111.8019741
+      }
+    },
+    {
+      "distance": {
+        "text": "2.9 mi",
+        "value": 4746
+      },
+      "duration": {
+        "text": "5 mins",
+        "value": 312
+      },
+      "end_location": {
+        "lat": 40.7507796,
+        "lng": -111.8305167
+      },
+      "start_location": {
+        "lat": 40.7132364,
+        "lng": -111.8057083
+      }
+    },
+    {
+      "distance": {
+        "text": "0.9 mi",
+        "value": 1385
+      },
+      "duration": {
+        "text": "2 mins",
+        "value": 105
+      },
+      "end_location": {
+        "lat": 40.7510427,
+        "lng": -111.8141021
+      },
+      "maneuver": "turn-right",
+      "start_location": {
+        "lat": 40.7507796,
+        "lng": -111.8305167
+      }
+    }
+  ],
+  "traffic_speed_entry": [],
+  "via_waypoint": []
+}

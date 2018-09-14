@@ -1,0 +1,138 @@
+{% set google_api_key = salt['pillar.get']('google:api_key') %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+    <!-- Start Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- End Bootstrap -->
+  </head>
+  <body>
+      <div class='container'>
+        <h3>Truck Tracker</h3>
+        <!--The div element for the map -->
+        <div id='app'>
+            {% raw %}
+            <div class='row'>
+                <div class='col-md-12'>
+                    <div id="map"></div>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-md-12'>
+                    <div id='truck_list'>
+                        <table class='table'>
+                            <thead>
+                                <tr>
+                                    <th>Truck</th>
+                                    <th>Destination</th>
+                                    <th>Driver</th>
+                                    <th>Location</th>
+                                    <th>Cargo</th>
+                                    <th>Status</th>
+                                </tr> 
+                            </thead>
+                            <tbody>
+                                <tr v-for='truck in trucks'>
+                                    <td>{{ truck.id}}</td>
+                                    <td>{{ truck.destination}}</td>
+                                    <td>{{ truck.driver? truck.driver: 'tbd'}}</td>
+                                    <td>{{ truck.location}}</td>
+                                    <td>{{ truck.cargo.used }} of {{ truck.cargo.capacity }}</td>
+                                    <td>{{ truck.status}}</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            {% endraw %}
+        </div>
+      </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js'></script>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+
+// Initialize Vue.js app
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!',
+    trucks: []
+  }
+})
+
+// Initialize and add the map
+var map;
+var timer;
+var markers = {};
+function initMap() {
+  var center_point = {
+    "lat": 41.7632725,
+    "lng": -72.68462149999999
+  };
+  // The map, centered at Uluru
+  map = new google.maps.Map(document.getElementById('map'), {zoom: 4, center: center_point});
+  load_truck_locations();
+  timer = setInterval(load_truck_locations, 1000);
+}
+function load_truck_locations(){
+  
+  var cache_buster = new Date().getTime();
+  axios.get('/static/data.js', params={'buster': cache_buster}).then(function(response){
+      // The marker, positioned at Uluru
+      var location, truck_id;
+      app.trucks = [];
+      for(var x=0, l=response.data.length; x<l; x++){
+          location = response.data[x].location;
+          truck_id = response.data[x].id;
+          app.trucks.push(response.data[x]);
+          var latlng;
+          if(truck_id && location !== ''){
+            // console.log('truck_id', truck_id);
+            // console.log('location', location);
+            if( !markers.hasOwnProperty(truck_id)){
+                markers[truck_id] = new google.maps.Marker({
+                    // icon: 'https://maps.google.com/mapfiles/kml/shapes/truck.png',
+                    position: location,
+                    label: truck_id,
+                    map: map});
+            }else{
+                markers[truck_id].setPosition(location);
+            }
+          }
+      }
+  });
+}
+
+
+
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key={{ google_api_key }}&callback=initMap">
+    </script>
+  </body>
+</html>

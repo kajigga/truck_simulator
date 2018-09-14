@@ -1,0 +1,10 @@
+.vagrant
+gitlab
+jenkins_home
+*coverage*
+*nosetests*
+*__pycache__
+*.idea
+
+*.swp
+jenkins_home copy

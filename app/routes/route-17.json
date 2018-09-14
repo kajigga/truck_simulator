@@ -1,0 +1,986 @@
+{
+  "distance": {
+    "text": "2,050 mi",
+    "value": 3298593
+  },
+  "duration": {
+    "text": "1 day 7 hours",
+    "value": 111938
+  },
+  "duration_in_traffic": {
+    "text": "1 day 7 hours",
+    "value": 113306
+  },
+  "end_address": "400 S Monroe St, Tallahassee, FL 32399, USA",
+  "end_location": {
+    "lat": 30.4387984,
+    "lng": -84.2823298
+  },
+  "start_address": "2801 North Thanksgiving Way #150, Lehi, UT 84043, USA",
+  "start_location": {
+    "lat": 40.4231408,
+    "lng": -111.8822558
+  },
+  "steps": [
+    {
+      "distance": {
+        "text": "25.0 mi",
+        "value": 40262
+      },
+      "duration": {
+        "text": "21 mins",
+        "value": 1273
+      },
+      "end_location": {
+        "lat": 40.1363728,
+        "lng": -111.6469814
+      },
+      "start_location": {
+        "lat": 40.4231408,
+        "lng": -111.8822558
+      }
+    },
+    {
+      "distance": {
+        "text": "0.8 mi",
+        "value": 1272
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 69
+      },
+      "end_location": {
+        "lat": 40.1258887,
+        "lng": -111.6471353
+      },
+      "maneuver": "ramp-right",
+      "start_location": {
+        "lat": 40.1363728,
+        "lng": -111.6469814
+      }
+    },
+    {
+      "distance": {
+        "text": "127 mi",
+        "value": 205127
+      },
+      "duration": {
+        "text": "2 hours 4 mins",
+        "value": 7410
+      },
+      "end_location": {
+        "lat": 38.9845267,
+        "lng": -110.2203734
+      },
+      "start_location": {
+        "lat": 40.1258887,
+        "lng": -111.6471353
+      }
+    },
+    {
+      "distance": {
+        "text": "23.1 mi",
+        "value": 37213
+      },
+      "duration": {
+        "text": "19 mins",
+        "value": 1139
+      },
+      "end_location": {
+        "lat": 38.9412665,
+        "lng": -109.8233425
+      },
+      "maneuver": "merge",
+      "start_location": {
+        "lat": 38.9845267,
+        "lng": -110.2203734
+      }
+    },
+    {
+      "distance": {
+        "text": "0.3 mi",
+        "value": 549
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 30
+      },
+      "end_location": {
+        "lat": 38.9416927,
+        "lng": -109.8170297
+      },
+      "maneuver": "ramp-right",
+      "start_location": {
+        "lat": 38.9412665,
+        "lng": -109.8233425
+      }
+    },
+    {
+      "distance": {
+        "text": "85.3 mi",
+        "value": 137351
+      },
+      "duration": {
+        "text": "1 hour 29 mins",
+        "value": 5320
+      },
+      "end_location": {
+        "lat": 37.87263799999999,
+        "lng": -109.3429106
+      },
+      "maneuver": "turn-right",
+      "start_location": {
+        "lat": 38.9416927,
+        "lng": -109.8170297
+      }
+    },
+    {
+      "distance": {
+        "text": "102 mi",
+        "value": 163466
+      },
+      "duration": {
+        "text": "1 hour 41 mins",
+        "value": 6046
+      },
+      "end_location": {
+        "lat": 36.7849612,
+        "lng": -108.685142
+      },
+      "maneuver": "turn-left",
+      "start_location": {
+        "lat": 37.87263799999999,
+        "lng": -109.3429106
+      }
+    },
+    {
+      "distance": {
+        "text": "26.5 mi",
+        "value": 42706
+      },
+      "duration": {
+        "text": "29 mins",
+        "value": 1746
+      },
+      "end_location": {
+        "lat": 36.7316609,
+        "lng": -108.2333019
+      },
+      "maneuver": "turn-left",
+      "start_location": {
+        "lat": 36.7849612,
+        "lng": -108.685142
+      }
+    },
+    {
+      "distance": {
+        "text": "0.9 mi",
+        "value": 1515
+      },
+      "duration": {
+        "text": "2 mins",
+        "value": 100
+      },
+      "end_location": {
+        "lat": 36.7226435,
+        "lng": -108.2217549
+      },
+      "maneuver": "turn-right",
+      "start_location": {
+        "lat": 36.7316609,
+        "lng": -108.2333019
+      }
+    },
+    {
+      "distance": {
+        "text": "5.5 mi",
+        "value": 8778
+      },
+      "duration": {
+        "text": "7 mins",
+        "value": 410
+      },
+      "end_location": {
+        "lat": 36.6602656,
+        "lng": -108.224086
+      },
+      "maneuver": "turn-right",
+      "start_location": {
+        "lat": 36.7226435,
+        "lng": -108.2217549
+      }
+    },
+    {
+      "distance": {
+        "text": "1.7 mi",
+        "value": 2706
+      },
+      "duration": {
+        "text": "2 mins",
+        "value": 137
+      },
+      "end_location": {
+        "lat": 36.6390417,
+        "lng": -108.2105116
+      },
+      "maneuver": "turn-left",
+      "start_location": {
+        "lat": 36.6602656,
+        "lng": -108.224086
+      }
+    },
+    {
+      "distance": {
+        "text": "12.9 mi",
+        "value": 20706
+      },
+      "duration": {
+        "text": "13 mins",
+        "value": 804
+      },
+      "end_location": {
+        "lat": 36.5963116,
+        "lng": -108.0081746
+      },
+      "maneuver": "turn-left",
+      "start_location": {
+        "lat": 36.6390417,
+        "lng": -108.2105116
+      }
+    },
+    {
+      "distance": {
+        "text": "143 mi",
+        "value": 230328
+      },
+      "duration": {
+        "text": "2 hours 9 mins",
+        "value": 7738
+      },
+      "end_location": {
+        "lat": 35.3163858,
+        "lng": -106.5352969
+      },
+      "maneuver": "turn-right",
+      "start_location": {
+        "lat": 36.5963116,
+        "lng": -108.0081746
+      }
+    },
+    {
+      "distance": {
+        "text": "15.8 mi",
+        "value": 25367
+      },
+      "duration": {
+        "text": "14 mins",
+        "value": 829
+      },
+      "end_location": {
+        "lat": 35.1093112,
+        "lng": -106.627934
+      },
+      "start_location": {
+        "lat": 35.3163858,
+        "lng": -106.5352969
+      }
+    },
+    {
+      "distance": {
+        "text": "8.3 mi",
+        "value": 13333
+      },
+      "duration": {
+        "text": "8 mins",
+        "value": 468
+      },
+      "end_location": {
+        "lat": 35.07127560000001,
+        "lng": -106.5017755
+      },
+      "maneuver": "ramp-right",
+      "start_location": {
+        "lat": 35.1093112,
+        "lng": -106.627934
+      }
+    },
+    {
+      "distance": {
+        "text": "284 mi",
+        "value": 456924
+      },
+      "duration": {
+        "text": "4 hours 1 min",
+        "value": 14483
+      },
+      "end_location": {
+        "lat": 35.1926096,
+        "lng": -101.6973141
+      },
+      "maneuver": "keep-left",
+      "start_location": {
+        "lat": 35.07127560000001,
+        "lng": -106.5017755
+      }
+    },
+    {
+      "distance": {
+        "text": "0.4 mi",
+        "value": 722
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 25
+      },
+      "end_location": {
+        "lat": 35.192721,
+        "lng": -101.6893766
+      },
+      "maneuver": "ramp-right",
+      "start_location": {
+        "lat": 35.1926096,
+        "lng": -101.6973141
+      }
+    },
+    {
+      "distance": {
+        "text": "211 mi",
+        "value": 339550
+      },
+      "duration": {
+        "text": "3 hours 9 mins",
+        "value": 11323
+      },
+      "end_location": {
+        "lat": 33.9450425,
+        "lng": -98.5277625
+      },
+      "start_location": {
+        "lat": 35.192721,
+        "lng": -101.6893766
+      }
+    },
+    {
+      "distance": {
+        "text": "0.6 mi",
+        "value": 931
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 34
+      },
+      "end_location": {
+        "lat": 33.9398796,
+        "lng": -98.52034599999999
+      },
+      "maneuver": "ramp-right",
+      "start_location": {
+        "lat": 33.9450425,
+        "lng": -98.5277625
+      }
+    },
+    {
+      "distance": {
+        "text": "2.4 mi",
+        "value": 3921
+      },
+      "duration": {
+        "text": "2 mins",
+        "value": 145
+      },
+      "end_location": {
+        "lat": 33.9091345,
+        "lng": -98.50176479999999
+      },
+      "maneuver": "merge",
+      "start_location": {
+        "lat": 33.9398796,
+        "lng": -98.52034599999999
+      }
+    },
+    {
+      "distance": {
+        "text": "1.8 mi",
+        "value": 2862
+      },
+      "duration": {
+        "text": "2 mins",
+        "value": 109
+      },
+      "end_location": {
+        "lat": 33.8881816,
+        "lng": -98.4842182
+      },
+      "start_location": {
+        "lat": 33.9091345,
+        "lng": -98.50176479999999
+      }
+    },
+    {
+      "distance": {
+        "text": "71.6 mi",
+        "value": 115274
+      },
+      "duration": {
+        "text": "1 hour 0 mins",
+        "value": 3619
+      },
+      "end_location": {
+        "lat": 33.2410435,
+        "lng": -97.6019405
+      },
+      "maneuver": "keep-right",
+      "start_location": {
+        "lat": 33.8881816,
+        "lng": -98.4842182
+      }
+    },
+    {
+      "distance": {
+        "text": "0.1 mi",
+        "value": 225
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 30
+      },
+      "end_location": {
+        "lat": 33.2392423,
+        "lng": -97.6020037
+      },
+      "start_location": {
+        "lat": 33.2410435,
+        "lng": -97.6019405
+      }
+    },
+    {
+      "distance": {
+        "text": "12.6 mi",
+        "value": 20216
+      },
+      "duration": {
+        "text": "12 mins",
+        "value": 715
+      },
+      "end_location": {
+        "lat": 33.2456748,
+        "lng": -97.39019929999999
+      },
+      "maneuver": "turn-left",
+      "start_location": {
+        "lat": 33.2392423,
+        "lng": -97.6020037
+      }
+    },
+    {
+      "distance": {
+        "text": "12.5 mi",
+        "value": 20132
+      },
+      "duration": {
+        "text": "12 mins",
+        "value": 731
+      },
+      "end_location": {
+        "lat": 33.229926,
+        "lng": -97.17483209999999
+      },
+      "maneuver": "straight",
+      "start_location": {
+        "lat": 33.2456748,
+        "lng": -97.39019929999999
+      }
+    },
+    {
+      "distance": {
+        "text": "0.2 mi",
+        "value": 289
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 29
+      },
+      "end_location": {
+        "lat": 33.2275891,
+        "lng": -97.17364409999999
+      },
+      "maneuver": "turn-right",
+      "start_location": {
+        "lat": 33.229926,
+        "lng": -97.17483209999999
+      }
+    },
+    {
+      "distance": {
+        "text": "486 ft",
+        "value": 148
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 8
+      },
+      "end_location": {
+        "lat": 33.226438,
+        "lng": -97.1728836
+      },
+      "start_location": {
+        "lat": 33.2275891,
+        "lng": -97.17364409999999
+      }
+    },
+    {
+      "distance": {
+        "text": "1.0 mi",
+        "value": 1687
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 58
+      },
+      "end_location": {
+        "lat": 33.2121754,
+        "lng": -97.1669953
+      },
+      "maneuver": "merge",
+      "start_location": {
+        "lat": 33.226438,
+        "lng": -97.1728836
+      }
+    },
+    {
+      "distance": {
+        "text": "9.8 mi",
+        "value": 15721
+      },
+      "duration": {
+        "text": "9 mins",
+        "value": 539
+      },
+      "end_location": {
+        "lat": 33.126791,
+        "lng": -97.03730979999999
+      },
+      "maneuver": "keep-left",
+      "start_location": {
+        "lat": 33.2121754,
+        "lng": -97.1669953
+      }
+    },
+    {
+      "distance": {
+        "text": "17.1 mi",
+        "value": 27544
+      },
+      "duration": {
+        "text": "16 mins",
+        "value": 944
+      },
+      "end_location": {
+        "lat": 32.9201768,
+        "lng": -96.8994249
+      },
+      "maneuver": "fork-right",
+      "start_location": {
+        "lat": 33.126791,
+        "lng": -97.03730979999999
+      }
+    },
+    {
+      "distance": {
+        "text": "0.4 mi",
+        "value": 633
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 27
+      },
+      "end_location": {
+        "lat": 32.914496,
+        "lng": -96.8994288
+      },
+      "maneuver": "ramp-right",
+      "start_location": {
+        "lat": 32.9201768,
+        "lng": -96.8994249
+      }
+    },
+    {
+      "distance": {
+        "text": "1.2 mi",
+        "value": 1882
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 71
+      },
+      "end_location": {
+        "lat": 32.9094212,
+        "lng": -96.88675599999999
+      },
+      "maneuver": "fork-right",
+      "start_location": {
+        "lat": 32.914496,
+        "lng": -96.8994288
+      }
+    },
+    {
+      "distance": {
+        "text": "318 ft",
+        "value": 97
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 4
+      },
+      "end_location": {
+        "lat": 32.9095763,
+        "lng": -96.8857373
+      },
+      "maneuver": "fork-right",
+      "start_location": {
+        "lat": 32.9094212,
+        "lng": -96.88675599999999
+      }
+    },
+    {
+      "distance": {
+        "text": "20.0 mi",
+        "value": 32153
+      },
+      "duration": {
+        "text": "19 mins",
+        "value": 1144
+      },
+      "end_location": {
+        "lat": 32.7980047,
+        "lng": -96.626046
+      },
+      "maneuver": "keep-left",
+      "start_location": {
+        "lat": 32.9095763,
+        "lng": -96.8857373
+      }
+    },
+    {
+      "distance": {
+        "text": "16.0 mi",
+        "value": 25772
+      },
+      "duration": {
+        "text": "14 mins",
+        "value": 864
+      },
+      "end_location": {
+        "lat": 32.7391929,
+        "lng": -96.37252810000001
+      },
+      "maneuver": "ramp-right",
+      "start_location": {
+        "lat": 32.7980047,
+        "lng": -96.626046
+      }
+    },
+    {
+      "distance": {
+        "text": "4.5 mi",
+        "value": 7283
+      },
+      "duration": {
+        "text": "4 mins",
+        "value": 241
+      },
+      "end_location": {
+        "lat": 32.7134584,
+        "lng": -96.30380249999999
+      },
+      "start_location": {
+        "lat": 32.7391929,
+        "lng": -96.37252810000001
+      }
+    },
+    {
+      "distance": {
+        "text": "371 mi",
+        "value": 597768
+      },
+      "duration": {
+        "text": "5 hours 16 mins",
+        "value": 18936
+      },
+      "end_location": {
+        "lat": 32.2760827,
+        "lng": -90.17912729999999
+      },
+      "maneuver": "merge",
+      "start_location": {
+        "lat": 32.7134584,
+        "lng": -96.30380249999999
+      }
+    },
+    {
+      "distance": {
+        "text": "0.1 mi",
+        "value": 220
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 8
+      },
+      "end_location": {
+        "lat": 32.275685,
+        "lng": -90.17683579999999
+      },
+      "maneuver": "fork-right",
+      "start_location": {
+        "lat": 32.2760827,
+        "lng": -90.17912729999999
+      }
+    },
+    {
+      "distance": {
+        "text": "83.1 mi",
+        "value": 133793
+      },
+      "duration": {
+        "text": "1 hour 26 mins",
+        "value": 5146
+      },
+      "end_location": {
+        "lat": 31.3591009,
+        "lng": -89.3489183
+      },
+      "maneuver": "ramp-right",
+      "start_location": {
+        "lat": 32.275685,
+        "lng": -90.17683579999999
+      }
+    },
+    {
+      "distance": {
+        "text": "8.1 mi",
+        "value": 13110
+      },
+      "duration": {
+        "text": "7 mins",
+        "value": 447
+      },
+      "end_location": {
+        "lat": 31.2476196,
+        "lng": -89.328606
+      },
+      "start_location": {
+        "lat": 31.3591009,
+        "lng": -89.3489183
+      }
+    },
+    {
+      "distance": {
+        "text": "1.1 mi",
+        "value": 1827
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 82
+      },
+      "end_location": {
+        "lat": 31.2381839,
+        "lng": -89.31603299999999
+      },
+      "maneuver": "ramp-right",
+      "start_location": {
+        "lat": 31.2476196,
+        "lng": -89.328606
+      }
+    },
+    {
+      "distance": {
+        "text": "85.8 mi",
+        "value": 138065
+      },
+      "duration": {
+        "text": "1 hour 27 mins",
+        "value": 5242
+      },
+      "end_location": {
+        "lat": 30.7075736,
+        "lng": -88.1234887
+      },
+      "start_location": {
+        "lat": 31.2381839,
+        "lng": -89.31603299999999
+      }
+    },
+    {
+      "distance": {
+        "text": "0.1 mi",
+        "value": 205
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 47
+      },
+      "end_location": {
+        "lat": 30.708998,
+        "lng": -88.12285899999999
+      },
+      "maneuver": "turn-left",
+      "start_location": {
+        "lat": 30.7075736,
+        "lng": -88.1234887
+      }
+    },
+    {
+      "distance": {
+        "text": "5.4 mi",
+        "value": 8619
+      },
+      "duration": {
+        "text": "5 mins",
+        "value": 308
+      },
+      "end_location": {
+        "lat": 30.6336344,
+        "lng": -88.11856519999999
+      },
+      "start_location": {
+        "lat": 30.708998,
+        "lng": -88.12285899999999
+      }
+    },
+    {
+      "distance": {
+        "text": "6.4 mi",
+        "value": 10369
+      },
+      "duration": {
+        "text": "6 mins",
+        "value": 342
+      },
+      "end_location": {
+        "lat": 30.683344,
+        "lng": -88.04229819999999
+      },
+      "maneuver": "ramp-left",
+      "start_location": {
+        "lat": 30.6336344,
+        "lng": -88.11856519999999
+      }
+    },
+    {
+      "distance": {
+        "text": "238 mi",
+        "value": 383027
+      },
+      "duration": {
+        "text": "3 hours 18 mins",
+        "value": 11904
+      },
+      "end_location": {
+        "lat": 30.4810538,
+        "lng": -84.31527179999999
+      },
+      "maneuver": "keep-left",
+      "start_location": {
+        "lat": 30.683344,
+        "lng": -88.04229819999999
+      }
+    },
+    {
+      "distance": {
+        "text": "0.5 mi",
+        "value": 848
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 52
+      },
+      "end_location": {
+        "lat": 30.4814686,
+        "lng": -84.30708969999999
+      },
+      "maneuver": "ramp-right",
+      "start_location": {
+        "lat": 30.4810538,
+        "lng": -84.31527179999999
+      }
+    },
+    {
+      "distance": {
+        "text": "3.6 mi",
+        "value": 5859
+      },
+      "duration": {
+        "text": "12 mins",
+        "value": 708
+      },
+      "end_location": {
+        "lat": 30.4395981,
+        "lng": -84.2806624
+      },
+      "maneuver": "turn-right",
+      "start_location": {
+        "lat": 30.4814686,
+        "lng": -84.30708969999999
+      }
+    },
+    {
+      "distance": {
+        "text": "361 ft",
+        "value": 110
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 24
+      },
+      "end_location": {
+        "lat": 30.4395976,
+        "lng": -84.2818063
+      },
+      "maneuver": "turn-right",
+      "start_location": {
+        "lat": 30.4395981,
+        "lng": -84.2806624
+      }
+    },
+    {
+      "distance": {
+        "text": "322 ft",
+        "value": 98
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 18
+      },
+      "end_location": {
+        "lat": 30.4389616,
+        "lng": -84.2825001
+      },
+      "maneuver": "turn-slight-left",
+      "start_location": {
+        "lat": 30.4395976,
+        "lng": -84.2818063
+      }
+    },
+    {
+      "distance": {
+        "text": "98 ft",
+        "value": 30
+      },
+      "duration": {
+        "text": "1 min",
+        "value": 12
+      },
+      "end_location": {
+        "lat": 30.4387984,
+        "lng": -84.2823298
+      },
+      "maneuver": "turn-left",
+      "start_location": {
+        "lat": 30.4389616,
+        "lng": -84.2825001
+      }
+    }
+  ],
+  "traffic_speed_entry": [],
+  "via_waypoint": []
+}
