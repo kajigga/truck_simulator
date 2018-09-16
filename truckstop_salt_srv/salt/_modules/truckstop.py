@@ -169,7 +169,7 @@ def start_new_truck(truck_id):
         msg = '{} already existed'.format(truck_id)
     except:
         __salt__['dockerng.create'](name=truck_id,
-                                          image='truck:prod',
+                                          image='truck:latest',
                                           environment=environment)
         msg = '{} was created'.format(truck_id)
 

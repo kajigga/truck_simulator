@@ -3,9 +3,9 @@
 
 checkout_testTruck_code:
   git.latest:
-    - name: git@10.62.10.25:kajigga/truckstop.git
-    - rev: dev
-    - branch: dev
+    - name: {{ salt['pillar.get']('truckstop:repo_url') }}
+    - rev: {{ salt['pillar.get']('truckstop:repo_branch') }}
+    - branch: {{ salt['pillar.get']('truckstop:repo_branch') }}
     - force_fetch: True
     - force_reset: True
     - target: /tmp/testTruck
@@ -18,7 +18,7 @@ build_image:
   docker_image.present:
     - name: "truck"
     - build: /tmp/testTruck/
-    - tag: prod
+    - tag: latest
     #- dockerfile: /tmp/testTruck/DockerFile
     - force: true
     - require:

@@ -19,9 +19,9 @@ test_pillar:
 # make sure image is present (and rebuilt) before testing
 build_image:
   docker_image.present:
-    - name: "truck"
+    - name: truck
     - build: /tmp/testTruck/
-    - tag: 'prod'
+    - tag: latest
     - require:
       - test_pillar
 
@@ -30,7 +30,7 @@ build_image:
 start_test_container:
   docker_container.running:
     - name: {{truck_id}}
-    - image: 'truck:prod'
+    - image: 'truck:latest'
     - environment:
       - TRUCK_ID: {{truck_id}}
       - TRUCKSTOP_URL: {{ salt['pillar.get']('truckstop:truckstop_url')}}

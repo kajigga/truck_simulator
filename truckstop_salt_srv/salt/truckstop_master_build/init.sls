@@ -25,12 +25,12 @@ create_certificate:
 setup_master_conf:
   file.recurse:
     - name: /etc/salt/master.d/
-    - source: salt://prep_for_api/files/master.d
+    - source: salt://truckstop_master_build/files/master.d
 
 setup_minion_conf:
   file.recurse:
     - name: /etc/salt/minion.d/
-    - source: salt://prep_for_api/files/minion.d
+    - source: salt://truckstop_master_build/files/minion.d
 
 
 # start, or restart, the salt-api when one of the watched state ids changes

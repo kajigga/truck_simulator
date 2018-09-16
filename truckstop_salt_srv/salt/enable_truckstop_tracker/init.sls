@@ -44,11 +44,6 @@ configure_sdb:
           table: sdb
           create_table: True
 
-add_beacon:
-  file.managed:
-    - name: /etc/salt/minion.d/beacons.conf
-    - source: salt://enable_truckstop_tracker/beacons.conf
-
 restart_minion:
   service.running:
     - name: salt-minion

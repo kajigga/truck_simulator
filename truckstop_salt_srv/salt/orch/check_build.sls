@@ -8,7 +8,7 @@
 # runs the truck.run_setup_build_checks:
 run_buildchecks:
   salt.state:
-    - tgt: truckstop-master
+    - tgt: '*'
     - sls: build_checks
     - pillar: 
         post: {{ post|yaml}}
@@ -24,7 +24,7 @@ wait_for_ping_from_test_truck:
   salt.wait_for_event:
     - name: truckstop/test_truck/location
     - id_list: 
-      - truckstop-master
+      - '*' # truckstop-master
     - timeout: 65
     - require:
       - run_setup_build_checks
@@ -51,7 +51,7 @@ received_startup_event:
 
 stop_test_container:
   salt.state:
-    - tgt: truckstop-master
+    - tgt: '*'
     - sls: build_checks.stop_test_truck
     - pillar: 
         post: {{ post }}
@@ -62,7 +62,7 @@ stop_test_container:
 # release_new_image_for_trucks:
 release_new_image_for_trucks:
   salt.state:
-    - tgt: truckstop-master
+    - tgt: '*'
     - sls: build_checks.release_image
     - pillar: 
         post: {{ post }}

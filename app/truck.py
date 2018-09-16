@@ -180,7 +180,7 @@ class Truck(object):
                 attempts -= 1
                 # requeue the message if attempts is greater than 0
                 if attempts > 0:
-                    self.message_queue.append((tag, attempts))
+                    self.message_queue.append((tag, attempts, data))
 
     def choose_route(self):
         """Take a truck_id and have a route assigned to the truck"""
@@ -267,8 +267,7 @@ class Truck(object):
         # v1 - add messages to a queue
         # a message is two parts, the tag and the max attempts
         log.debug('tag: %s', tag)
-        msg = (
-               tag,
+        msg = (tag,
                self.MAX_MESSAGE_ATTEMPTS,
                self.to_dict())
         self.message_queue.append(msg)

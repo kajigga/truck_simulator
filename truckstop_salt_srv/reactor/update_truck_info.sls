@@ -2,7 +2,7 @@
 # truck's information
 call_build_check_orch:
   local.truckstop.save_truck:
-    - tgt: truckstop-master
+    - tgt: '*'
     - args:
       - truck: {{ data['post']|yaml }}
 
