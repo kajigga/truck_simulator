@@ -211,6 +211,7 @@ def add_truck(truck_id, truck_info={}):
     return (truck_id in truck_list, truck)
 
 
+# TODO
 def remove_truck(truck_id):
     truck_list = set(get_active_trucks())
     if truck_id not in truck_list:

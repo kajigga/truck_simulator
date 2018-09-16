@@ -48,7 +48,6 @@ restart_minion:
   service.running:
     - name: salt-minion
     - watch: 
-      - add_beacon
       - configure_sdb
 
 # Need to generate an rsa key
