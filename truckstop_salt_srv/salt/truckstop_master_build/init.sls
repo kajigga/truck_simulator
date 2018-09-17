@@ -16,8 +16,9 @@ pip_pkgs_installed:
     - name: 
       - cherrypy
       - docker
+      - GitPython
     - require:
-      install_pip
+      - install_pip
 
 # Create a certificate for the api
 create_certificate:

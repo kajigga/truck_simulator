@@ -4,7 +4,7 @@
 # with TruckStop (telemetry arriving, etc)
 
 # checkout the latest from the #dev branch
-test_pillar:
+test_build_pillar:
   test.check_pillar:
     - present:
       - post
@@ -21,7 +21,7 @@ checkout_testTruck_code:
     - target: /tmp/testTruck
     - identity: /etc/salt/git_id_rsa
 
-test_pillar_out:
+test_build_pillar_out:
   test.configurable_test_state:
     - name: pillar output
     - changes: False
@@ -43,7 +43,7 @@ build_test_image:
     #- dockerfile: /tmp/testTruck/DockerFile
     - force: true
     - watch:
-      - test_pillar
+      - test_build_pillar
 
 # # start a container using the new image
 {% set truck_id = 'test_truck' %}
