@@ -12,7 +12,9 @@ install_cherrypy:
       - python-pip
       - python-pygit2
   pip.installed:
-    - name: cherrypy
+    - name: 
+      - cherrypy
+      - docker
 
 # Create a certificate for the api
 create_certificate:
