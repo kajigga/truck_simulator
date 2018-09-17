@@ -1,3 +1,8 @@
+test_pillar:
+  test.check_pillar:
+    - present:
+      - 'google:api_key'
+
 add_single_page_app:
   file.recurse:
     - name: /etc/salt/app

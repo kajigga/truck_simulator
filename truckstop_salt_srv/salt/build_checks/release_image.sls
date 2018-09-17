@@ -1,6 +1,13 @@
 # Releasing a new image means the following:
 # - Build new docker image with predefined tag
 
+# Check for some required pillar values
+test_pillar:
+  test.check_pillar:
+    - present:
+      - 'truckstop:repo_url'
+      - 'truckstop:repo_branch'
+
 checkout_testTruck_code:
   git.latest:
     - name: {{ salt['pillar.get']('truckstop:repo_url') }}
@@ -10,11 +17,13 @@ checkout_testTruck_code:
     - force_reset: True
     - target: /tmp/testTruck
     - identity: /etc/salt/git_id_rsa
+    - require:
+      - test_pillar
 
 # # build an image based on the dev branch
 
 # make sure image is present and rebuilt 
-build_image:
+build_truck_image:
   docker_image.present:
     - name: "truck"
     - build: /tmp/testTruck/

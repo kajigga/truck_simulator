@@ -3,6 +3,8 @@ create_user:
   user.present:
     - name: saltdev
 
+# TODO I'm pretty sure this needs to be made platform-agnostice by looking up the os
+# family and listing them accordingly
 # Make sure the cherrypy and a few other items needed for git are installed
 install_cherrypy:
   pkg.installed:
@@ -33,15 +35,6 @@ setup_minion_conf:
     - source: salt://truckstop_master_build/files/minion.d
 
 
-# start, or restart, the salt-api when one of the watched state ids changes
-salt_api_running:
-  service.running:
-    - name: salt-api
-    - enable: true
-    - watch: 
-      - install_cherrypy
-      - create_certificate
-      - setup_master_conf
 
 # start, or restart, salt-master when one of the watched state ids changes
 salt_master_running:
@@ -50,6 +43,16 @@ salt_master_running:
     - enable: true
     - watch:
       - setup_master_conf
+
+# start, or restart, the salt-api when one of the watched state ids changes
+salt_api_running:
+  service.running:
+    - name: salt-api
+    - enable: true
+    - watch: 
+      - salt-master_running
+      - install_cherrypy
+      - create_certificate
 
 # start, or restart, salt-minion when one of the watched state ids changes
 salt_minion_running:

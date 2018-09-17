@@ -7,8 +7,8 @@
 checkout_testTruck_code:
   git.latest:
     - name: {{  salt['pillar.get']('truckstop:repo_url') }}
-    - rev: dev
-    - branch: dev
+    - rev: develop
+    - branch: develop
     - force_fetch: True
     - force_reset: True
     - target: /tmp/testTruck

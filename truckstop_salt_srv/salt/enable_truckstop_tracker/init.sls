@@ -1,32 +1,51 @@
+{% load_yaml as pkg_map %}
+RedHat:
+  repo_name: https://download.docker.com/linux/centos/docker-ce.repo
+  gpgkey: https://download.docker.com/linux/centos/gpg
+  gpgcheck: 1
+  packages:
+    - python2-pip
+    - gnupg2
+    - curl
+    - yum-utils
+    - device-mapper-persistent-data
+    - lvm2
+Debian:
+  repo_name: "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable"
+  gpgkey: https://download.docker.com/linux/debian/gpg
+  packages:
+    - python-pip
+    - python-apt
+    - apt-transport-https
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - gnupg2
+    - software-properties-common
+
+{% endload %}
+
+{% set pkg_info = salt['grains.filter_by'](pkg_map) %}
+
+
 packages_installed:
   pkg.installed:
     - pkgs: 
-      - python-pip
-      - python-apt
-      - apt-transport-https
-      - apt-transport-https
-      - ca-certificates
-      - curl
-      - gnupg2
-      - software-properties-common
+      {% for pkg in pkg_info.packages %}
+      - {{ pkg }}
+      {% endfor %}
+
 
 add_key_if_not_there:
   pkgrepo.managed:
-    - name: "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable"
-    - gpgcheck: 1
-    - key_url: https://download.docker.com/linux/debian/gpg 
-
-refresh_apt_if_needed:
-  module.run:
-    - name: pkg.refresh_db
-    - watch: 
-      - add_key_if_not_there
+    - name: {{ pkg_info.repo_name }}
+    - gpgcheck: {{ pkg_info.gpgcheck }}
+    - key_url: {{ pkg_info.gpgkey }}
+    - refresh: true
 
 docker_ce_installed:
   pkg.installed:
     - name: docker-ce
-    - watch: 
-      - refresh_apt_if_needed
 
 install_docker_python_module:
   pip.installed:
@@ -51,7 +70,7 @@ restart_minion:
       - configure_sdb
 
 # Need to generate an rsa key
-generate_ssh_key_for_gitlab:
-  cmd.run:
-    - name: ssh-keygen -q -N '' -f /etc/salt/git_id_rsa
-    - unless: test -f /etc/salt/git_id_rsa
+# generate_ssh_key_for_gitlab:
+#   cmd.run:
+#     - name: ssh-keygen -q -N '' -f /etc/salt/git_id_rsa
+#     - unless: test -f /etc/salt/git_id_rsa
