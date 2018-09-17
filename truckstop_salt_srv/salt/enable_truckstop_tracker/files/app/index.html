@@ -109,7 +109,7 @@ function load_truck_locations(){
           if(truck_id && location !== ''){
 
             var color =  'blue'; // red, green, purple, yellow, blue
-            switch(response.data[x]){
+            switch(response.data[x]['status']){
               case 'stationary':
                 color = 'yellow';
                 break;
