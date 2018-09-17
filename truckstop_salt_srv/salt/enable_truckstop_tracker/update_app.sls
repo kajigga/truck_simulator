@@ -1,4 +1,4 @@
-test_pillar:
+test_update_app_pillar:
   test.check_pillar:
     - present:
       - 'google:api_key'

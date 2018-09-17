@@ -2,7 +2,6 @@
 RedHat:
   repo_name: https://download.docker.com/linux/centos/docker-ce.repo
   gpgkey: https://download.docker.com/linux/centos/gpg
-  gpgcheck: 1
   packages:
     - python2-pip
     - gnupg2
@@ -39,7 +38,7 @@ packages_installed:
 add_key_if_not_there:
   pkgrepo.managed:
     - name: {{ pkg_info.repo_name }}
-    - gpgcheck: {{ pkg_info.gpgcheck }}
+    - gpgcheck: 1
     - key_url: {{ pkg_info.gpgkey }}
     - refresh: true
 

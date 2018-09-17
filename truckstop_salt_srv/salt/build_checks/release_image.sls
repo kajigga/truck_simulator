@@ -2,7 +2,7 @@
 # - Build new docker image with predefined tag
 
 # Check for some required pillar values
-test_pillar:
+test_build_checks_pillar:
   test.check_pillar:
     - present:
       - 'truckstop:repo_url'
