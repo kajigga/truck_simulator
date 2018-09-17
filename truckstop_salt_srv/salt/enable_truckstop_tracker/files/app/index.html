@@ -122,16 +122,17 @@ function load_truck_locations(){
             }
             // console.log('truck_id', truck_id);
             // console.log('location', location);
+            var icon = 'http://maps.google.com/mapfiles/ms/icons/'+color+'-dot.png';
             if( !markers.hasOwnProperty(truck_id)){
                 markers[truck_id] = new google.maps.Marker({
                     // icon: 'https://maps.google.com/mapfiles/kml/shapes/truck.png',
-                    icon: 'http://maps.google.com/mapfiles/ms/icons/'+color+'-dot.png',
+                    icon: icon,
                     position: location,
-                    //label: truck_id,
                     title: truck_id,
                     map: map});
             }else{
                 markers[truck_id].setPosition(location);
+                markers[truck_id].setIcon(icon);
             }
           }
       }
