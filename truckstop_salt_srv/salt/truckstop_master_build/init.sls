@@ -18,7 +18,7 @@ pip_{{pip_pkg}}_installed:
     - require:
       - install_pip
     - require_in:
-      - salt-master_running:
+      - salt-master_running
 {% endfor %}
 
 # Create a certificate for the api
