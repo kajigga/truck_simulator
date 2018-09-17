@@ -17,6 +17,8 @@ pip_{{pip_pkg}}_installed:
     - name: {{ pip_pkg }}
     - require:
       - install_pip
+    - require_in:
+      - salt-master_running:
 {% endfor %}
 
 # Create a certificate for the api
@@ -57,7 +59,6 @@ salt_api_running:
     - enable: true
     - watch: 
       - salt-master_running
-      - pip_pkgs_installed
       - create_certificate
 
 # start, or restart, salt-minion when one of the watched state ids changes
