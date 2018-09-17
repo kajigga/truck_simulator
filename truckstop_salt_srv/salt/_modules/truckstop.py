@@ -132,7 +132,7 @@ def stop_truck(truck_id):
     try:
         msg = __salt__['dockerng.stop'](truck_id)
     except:
-        msg = "Docker container {} must have been removed already".format( truck_id)
+        msg = "Docker container {} must have been removed already".format(truck_id)
     return msg
 
 
@@ -165,14 +165,13 @@ def start_new_truck(truck_id):
     log.debug(environment)
 
     try:
-        exists = __salt__['dockerng.inspect'](truck_id) # ['truckstop-master']
+        __salt__['dockerng.inspect'](truck_id)  # ['truckstop-master']
         msg = '{} already existed'.format(truck_id)
     except:
         __salt__['dockerng.create'](name=truck_id,
-                                          image='truck:latest',
-                                          environment=environment)
+                                    image='truck:latest',
+                                    environment=environment)
         msg = '{} was created'.format(truck_id)
-
 
     __salt__['dockerng.start'](name=truck_id)
 
@@ -183,7 +182,7 @@ def restart_truck(truck_id):
 
     __salt__['dockerng.rm'](name=truck_id, force=True)
     start_new_truck(truck_id)
-    
+
 
 def add_truck(truck_id, truck_info={}):
     """
@@ -204,7 +203,6 @@ def add_truck(truck_id, truck_info={}):
     truck_list.add(truck_id)
     set_active_trucks(list(truck_list))
 
-
     truck_list = set(get_active_trucks())
 
     __salt__['event.send']('truckstop/{}/added'.format(truck_id), truck)
@@ -222,6 +220,12 @@ def remove_truck(truck_id):
         set_active_trucks(list(truck_list))
         msg = '{} was removed'.format(truck_id)
     return msg
+
+
+def reset_all_trucks():
+    truck_list = set(get_active_trucks())
+    for truck_id in truck_list:
+        reset_truck(truck_id)
 
 
 def reset_truck(truck_id):
@@ -321,6 +325,9 @@ def get_commands(last_poll_page=0):
                 enumerate(cmds)))
     return {'commands': cmds, 'page': page}
 
+
 def update_data_file():
     """Update the truckstop data file for the map"""
-    salt.utils.json.dump(get_active_trucks(include_data=True), open('/etc/salt/app/static/data.js', 'w+'))
+    salt.utils.json.dump(
+            get_active_trucks(include_data=True),
+            open('/etc/salt/app/static/data.js', 'w+'))
