@@ -16,7 +16,9 @@ checkout_testTruck_code:
     - force_fetch: True
     - force_reset: True
     - target: /tmp/testTruck
+    {% if salt['pillar.get']('truckstop:is_git') %}
     - identity: /etc/salt/git_id_rsa
+    {% endif %}
     - require:
       - test_build_checks_pillar
 
