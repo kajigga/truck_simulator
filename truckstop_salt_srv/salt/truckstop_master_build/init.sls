@@ -37,7 +37,7 @@ setup_minion_conf:
 
 
 # start, or restart, salt-master when one of the watched state ids changes
-salt_master_running:
+salt-master_running:
   service.running:
     - name: salt-master
     - enable: true
