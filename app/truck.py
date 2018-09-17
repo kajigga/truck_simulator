@@ -51,6 +51,7 @@ class Truck(object):
             'id',
             'distance_travelled',
             'destination',
+            'driver',
             'location',
             'route',
             'route_done',
