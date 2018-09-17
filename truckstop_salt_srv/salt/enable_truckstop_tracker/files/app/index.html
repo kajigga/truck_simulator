@@ -104,21 +104,22 @@ function load_truck_locations(){
       for(var x=0, l=response.data.length; x<l; x++){
           location = response.data[x].location;
           truck_id = response.data[x].id;
-          var color =  'blue'; // red, green, purple, yellow, blue
-          switch(response.data[x]){
-            case 'stationary':
-              color = 'yellow';
-              break;
-            case 'active':
-              color = 'green';
-              break;
-            case 'broken_down':
-              color = 'red';
-              break;
-          }
           app.trucks.push(response.data[x]);
           var latlng;
           if(truck_id && location !== ''){
+
+            var color =  'blue'; // red, green, purple, yellow, blue
+            switch(response.data[x]){
+              case 'stationary':
+                color = 'yellow';
+                break;
+              case 'active':
+                color = 'green';
+                break;
+              case 'broken_down':
+                color = 'red';
+                break;
+            }
             // console.log('truck_id', truck_id);
             // console.log('location', location);
             if( !markers.hasOwnProperty(truck_id)){
