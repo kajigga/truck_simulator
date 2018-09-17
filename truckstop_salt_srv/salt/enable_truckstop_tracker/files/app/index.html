@@ -43,6 +43,7 @@
                                     <th>Truck</th>
                                     <th>Destination</th>
                                     <th>Driver</th>
+                                    <th>Distance Travelled</th>
                                     <th>Location</th>
                                     <th>Cargo</th>
                                     <th>Status</th>
@@ -53,6 +54,7 @@
                                     <td>{{ truck.id}}</td>
                                     <td>{{ truck.destination}}</td>
                                     <td>{{ truck.driver? truck.driver: 'tbd'}}</td>
+                                    <td>{{ parseInt(truck.distance_travelled) }}</td>
                                     <td>{{ truck.location}}</td>
                                     <td>{{ truck.cargo.used }} of {{ truck.cargo.capacity }}</td>
                                     <td>{{ truck.status}}</td>

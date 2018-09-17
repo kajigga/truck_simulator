@@ -25,6 +25,7 @@ class Truck(object):
         self.diagnostics_check = (None, [])
         self.destination = ''
         self.location = {}  # TODO Set this to the home office
+        self.driver = None
         self.route = {}
         self.route_done = False
         self.at_beginning = False
@@ -112,6 +113,14 @@ class Truck(object):
 
         return self.engine_running
 
+    def assign_driver(self):
+        if not self.driver:
+            try:
+                person_results = requests.get('https://randomuser.me/api/').json().get('results',[])
+                self.driver = choice(person_results)
+            except:
+                person_request = None
+
     def run(self, frequency=60):
         """
         On every turn, one of the following may happen:
@@ -131,6 +140,9 @@ class Truck(object):
         """
         # Notify the Truck Edge Server this Truck is online
         self.run_diagnostics()
+
+        # assign a driver
+        self.assign_driver()
 
         while self.diagnostics_check[0] and True:
             # self.send_message('truckstop/'+truck_id+'/turn', {})
