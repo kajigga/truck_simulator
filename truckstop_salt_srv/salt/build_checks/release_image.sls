@@ -18,7 +18,7 @@ checkout_testTruck_code:
     - target: /tmp/testTruck
     - identity: /etc/salt/git_id_rsa
     - require:
-      - test_pillar
+      - test_build_checks_pillar
 
 # # build an image based on the dev branch
 

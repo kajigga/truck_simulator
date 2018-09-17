@@ -4,6 +4,13 @@
 # with TruckStop (telemetry arriving, etc)
 
 # checkout the latest from the #dev branch
+test_pillar:
+  test.check_pillar:
+    - present:
+      - post
+      - 'post:buildName'
+      - 'truckstop:repo_url'
+
 checkout_testTruck_code:
   git.latest:
     - name: {{  salt['pillar.get']('truckstop:repo_url') }}
@@ -21,12 +28,6 @@ test_pillar_out:
     - result: True
     - comment: |
         post: {{ salt['pillar.get']('post') }}
-
-test_pillar:
-  test.check_pillar:
-    - present:
-      - post
-      - 'post:buildName'
 
 # # build an image based on the dev branch
 {% set buildName = salt['pillar.get']('post:buildName')|replace('#','num_') %}
