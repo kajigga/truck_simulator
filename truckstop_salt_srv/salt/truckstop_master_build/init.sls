@@ -38,6 +38,7 @@ setup_minion_conf:
   file.recurse:
     - name: /etc/salt/minion.d/
     - source: salt://truckstop_master_build/files/minion.d
+    - template: jinja
 
 
 
