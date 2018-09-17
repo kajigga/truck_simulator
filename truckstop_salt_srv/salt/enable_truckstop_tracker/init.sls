@@ -26,7 +26,6 @@ Debian:
 
 {% set pkg_info = salt['grains.filter_by'](pkg_map) %}
 
-
 packages_installed:
   pkg.installed:
     - pkgs: 
