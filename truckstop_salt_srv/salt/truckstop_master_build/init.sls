@@ -6,15 +6,18 @@ create_user:
 # TODO I'm pretty sure this needs to be made platform-agnostice by looking up the os
 # family and listing them accordingly
 # Make sure the cherrypy and a few other items needed for git are installed
-install_cherrypy:
+install_pip:
   pkg.installed:
     - pkgs: 
       - python-pip
-      - python-pygit2
+
+pip_pkgs_installed:
   pip.installed:
     - name: 
       - cherrypy
       - docker
+    - require:
+      install_pip
 
 # Create a certificate for the api
 create_certificate:
@@ -53,7 +56,7 @@ salt_api_running:
     - enable: true
     - watch: 
       - salt-master_running
-      - install_cherrypy
+      - pip_pkgs_installed
       - create_certificate
 
 # start, or restart, salt-minion when one of the watched state ids changes

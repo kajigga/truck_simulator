@@ -9,6 +9,7 @@ RedHat:
     - yum-utils
     - device-mapper-persistent-data
     - lvm2
+    - docker
 Debian:
   repo_name: "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable"
   gpgkey: https://download.docker.com/linux/debian/gpg
@@ -21,6 +22,7 @@ Debian:
     - curl
     - gnupg2
     - software-properties-common
+    - docker
 
 {% endload %}
 
