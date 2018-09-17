@@ -11,14 +11,13 @@ install_pip:
     - pkgs: 
       - python-pip
 
-pip_pkgs_installed:
+{% for pip_pkg in ['cherrypy','docker', 'GitPython'] %}
+pip_{{pip_pkg}}_installed:
   pip.installed:
-    - name: 
-      - cherrypy
-      - docker
-      - GitPython
+    - name: {{ pip_pkg }}
     - require:
       - install_pip
+{% endfor %}
 
 # Create a certificate for the api
 create_certificate:
