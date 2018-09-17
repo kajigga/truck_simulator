@@ -1,4 +1,3 @@
-# /srv/salt/top.sls
 base:
   '*':
     - truckstop_master_build
