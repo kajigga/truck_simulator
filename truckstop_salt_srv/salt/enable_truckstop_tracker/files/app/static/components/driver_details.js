@@ -1,9 +1,7 @@
+{% raw %}
 Vue.component('driver-details', {
     props: ['driver'],
-    template: `
-    <p>{{driver.name.first}} {{ driver.name.last }}</p>
-    
-    `
+    template: `<p>{{driver.name.first}} {{ driver.name.last }}</p>`
 
 });
-
+{% raw %}
