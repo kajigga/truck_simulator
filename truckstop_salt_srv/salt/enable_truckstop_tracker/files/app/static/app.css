@@ -1,7 +1,6 @@
-.driver img{
+.driver .photo{
     float: left;
-
 }
-.name:first-letter {
+.driver .name {
     text-transform:capitalize;
 }
