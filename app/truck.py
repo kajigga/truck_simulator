@@ -116,11 +116,8 @@ class Truck(object):
 
     def assign_driver(self):
         if not self.driver:
-            try:
-                person_results = requests.get('https://randomuser.me/api/').json().get('results',[])
-                self.driver = choice(person_results)
-            except:
-                person_request = None
+            person_results = requests.get('https://randomuser.me/api/').json().get('results',[])
+            self.driver = choice(person_results)
 
     def run(self, frequency=60):
         """
