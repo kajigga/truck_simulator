@@ -115,9 +115,8 @@ class Truck(object):
         return self.engine_running
 
     def assign_driver(self):
-        if not self.driver:
-            person_results = requests.get('https://randomuser.me/api/').json().get('results',[])
-            self.driver = choice(person_results)
+        person_results = requests.get('https://randomuser.me/api/').json().get('results', [])
+        self.driver = choice(person_results)
 
     def run(self, frequency=60):
         """
