@@ -4,4 +4,4 @@ Vue.component('driver-details', {
     template: `<p>{{driver.name.first}} {{ driver.name.last }}</p>`
 
 });
-{% raw %}
+{% endraw %}
