@@ -53,7 +53,7 @@
                                 <tr v-for='truck in trucks'>
                                     <td>{{ truck.id}}</td>
                                     <td>{{ truck.destination}}</td>
-                                    <td>{{ truck.driver? truck.driver: 'tbd'}}</td>
+                                    <td><driver-details></driver-details></td>
                                     <td>{{ parseInt(truck.distance_travelled) }}</td>
                                     <td>{{ truck.location}}</td>
                                     <td>{{ truck.cargo.used }} of {{ truck.cargo.capacity }}</td>
@@ -140,6 +140,16 @@ function load_truck_locations(){
       }
   });
 }
+
+Vue.component('driver-details', {
+    data: function(){
+        return {
+            driver: {}
+        }
+    },
+    template: 'driver info here soon'
+
+});
 
 
 
