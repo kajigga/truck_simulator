@@ -50,10 +50,10 @@
                                 </tr> 
                             </thead>
                             <tbody>
-                                <truck-details v-for='truck in trucks' 
-                                    v-bind:truck='truck'
-                                    v-bind:key='truck.id'>
-                                </truck-details>
+                                <tr is='truck-details' v-for='truck in trucks' 
+                                        v-bind:truck='truck'
+                                        v-bind:key='truck.id'>
+                                </tr>
                             </tbody>
                         </table>
                     </div>

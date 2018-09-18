@@ -1,0 +1,7 @@
+.driver img{
+    float: left;
+
+}
+.name:first-letter {
+    text-transform:capitalize;
+}
