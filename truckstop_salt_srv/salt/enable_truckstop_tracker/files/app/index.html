@@ -50,16 +50,10 @@
                                 </tr> 
                             </thead>
                             <tbody>
-                                <tr v-for='truck in trucks'>
-                                    <td>{{ truck.id}}</td>
-                                    <td>{{ truck.destination}}</td>
-                                    <td><driver-details :driver=truck.driver></driver-details></td>
-                                    <td>{{ parseInt(truck.distance_travelled) }}</td>
-                                    <td>{{ truck.location}}</td>
-                                    <td>{{ truck.cargo.used }} of {{ truck.cargo.capacity }}</td>
-                                    <td>{{ truck.status}}</td>
-                                </tr>
-
+                                <truck-details v-for='truck in trucks' 
+                                    v-bind:truck='truck'
+                                    v-bind:key='truck.id'>
+                                </truck-details>
                             </tbody>
                         </table>
                     </div>
@@ -68,25 +62,25 @@
             {% endraw %}
         </div>
       </div>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js'></script>
-    <!-- development version, includes helpful console warnings -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js'></script>
+      <!-- development version, includes helpful console warnings -->
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
-    <!-- Load Vue.js components from static -->
-    <script src="/static/components/driver_details.js"><script>
-    <script src="/static/components/truck_details.js"><script>
+      <!-- Load Vue.js components from static -->
+      <script src='/static/components/truck_details.js'></script>
+      <script src='/static/components/driver_details.js'></script>
 
-    <!-- Load app javascript -->
-    <script src="/static/app.js"><script>
+      <!-- Load app javascript -->
+      <script src="/static/app.js"></script>
 
-    <!--Load the API from the specified URL
-    * The async attribute allows the browser to render the page while the API loads
-    * The key parameter will contain your own API key 
-    * The callback parameter executes the initMap() function
-    -->
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key={{ google_api_key }}&callback=initMap">
-    </script>
+      <!--Load the API from the specified URL
+      * The async attribute allows the browser to render the page while the API loads
+      * The key parameter will contain your own API key 
+      * The callback parameter executes the initMap() function
+      -->
+      <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key={{ google_api_key }}&callback=initMap">
+      </script>
   </body>
 </html>

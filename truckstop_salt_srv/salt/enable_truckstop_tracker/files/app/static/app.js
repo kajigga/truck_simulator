@@ -65,7 +65,3 @@ function load_truck_locations(){
       }
   });
 }
-
-
-
-
